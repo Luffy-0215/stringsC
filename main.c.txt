@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+main(void)
+{
+	printf("\n\n\n");
+
+//declaration de chaine TXT
+
+	char TXT[100];
+
+//sasiie de phrase
+
+	printf("\tSaisir une ligne de text \n\n\t>");
+	gets(TXT);
+
+printf("\n\n\t---------------------------------------\n\n");
+//affichage de longeyr de TXT
+
+	printf("\tLongeur de chaine saisie est : %d",strlen(TXT));
+
+
+printf("\n\n\t---------------------------------------\n\n");
+//affichage de nombre de e contenu dans la chaine
+
+	int ne=0;//compteur sur les "e"
+
+	for (int i = 0; i < strlen(TXT); ++i)
+	{
+		if (TXT[i] == 'e')
+		{
+			ne += 1;
+		}
+	}
+printf("\tNombre des 'e' dans la chaine est : %d",ne);
+
+printf("\n\n\t---------------------------------------\n\n");
+//affichage de chaine on inverse
+
+	char ch[100];//chaine contenant l'inverse de TXT
+
+	for (int i = 0; i < strlen(TXT); ++i)
+	{
+		ch[i]=TXT[strlen(TXT)-i-1];
+	}
+
+printf("\tChaine apres inversion : \n\n\t> %s",ch);
+
+
+
+
+	getch();
+}
